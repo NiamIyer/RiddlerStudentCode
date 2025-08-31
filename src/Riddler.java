@@ -73,6 +73,12 @@ public class Riddler {
 
     public String decryptFour(String encrypted) {
         String decrypted = "";
+        for(int i = 0; i < encrypted.length(); i++) {
+            // Finds the decimal value of the dingbat
+            int hexadecimal = encrypted.codePointAt(i);
+            // Does the Caesar shift and adds to string
+            decrypted += (char) (hexadecimal - 9919);
+        }
 
         // TODO: Complete the decryptFour() function.
 
